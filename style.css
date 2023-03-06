@@ -1,0 +1,257 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "century gothic";
+  text-align: center;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 450px;
+  background-image: url(Images/together.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header img {
+  width: 290px;
+  margin: 10px;
+  height: 163px;
+}
+
+header p {
+  color: black;
+  font-weight: bold;
+  max-width: 30vw;
+  margin: 10px;
+  display: none;
+}
+
+header button {
+  height: fit-content;
+  width: fit-content;
+  justify-self: center;
+  margin: 10px;
+  padding: 15px;
+  background-color: black;
+  color: white;
+}
+
+header button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: minmax(300px, auto);
+  grid-template-areas:
+    "section-a"
+    "section-b"
+    "section-c"
+    "section-d"
+    "section-e";
+}
+
+.section-a {
+  grid-area: section-a;
+}
+
+.section-b {
+  grid-area: section-b;
+}
+
+.section-c {
+  grid-area: section-c;
+}
+
+.section-d {
+  grid-area: section-d;
+}
+
+.section-e {
+  grid-area: section-e;
+}
+
+#storyline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+#storyline h2 {
+  margin: 10px;
+}
+
+#storyline p {
+  margin-bottom: 10px;
+}
+
+#characters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+  background-color: darkgray;
+  padding: 20px;
+}
+
+#characters div {
+  width: 246px;
+  background-color: white;
+}
+
+#characters img {
+  width: 246px;
+  height: 205px;
+}
+
+#characters h3,
+p {
+  padding: 10px;
+  text-align: center;
+}
+
+.section-c,
+.section-d,
+.section-e {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
+
+.section-c,
+.section-d,
+.section-e p,
+h2 {
+  padding: 10px;
+}
+
+.section-c {
+  background-color: black;
+  color: white;
+}
+
+.section-d {
+  background-color: #351e29;
+  color: white;
+}
+
+.section-e {
+  background-color: #967d69;
+  color: white;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  height: 100px;
+}
+
+footer p {
+  padding: 5px;
+}
+
+span {
+  color: #28587b;
+  font-weight: bold;
+}
+
+svg {
+  display: absolute;
+  transform: translate(0%, 16%);
+}
+
+#github {
+  color: darkblue;
+  margin-left: 10px;
+}
+
+#github:hover svg {
+  fill: #33658a;
+}
+
+#thi {
+  margin-left: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #251F47;
+}
+
+#acastus:hover {
+  cursor: pointer;
+  text-decoration: 2px underline;
+  text-underline-offset: 10px;
+}
+
+@media screen and (min-width: 700px) {
+  header {
+    background-image: url(Images/milk.jpeg);
+  }
+
+  header p {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    display: flex;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "section-a section-a"
+      "section-b section-b"
+      "section-c section-c"
+      "section-d section-e";
+  }
+
+  .section-c,
+  .section-e {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .section-c p,
+  #storyline p {
+    max-width: 1024px;
+  }
+
+  .section-e p {
+    max-width: 500px;
+  }
+
+  footer {
+    flex-direction: row;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: black;
+  }
+}
